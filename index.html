@@ -100,9 +100,9 @@ ul.sp li{margin-bottom:8px}
 
 /* Вопросы интервью: блоки раскрываются */
 .vopr details{background:var(--plashka);border-radius:14px;margin:10px 0;max-width:44em}
-.vopr summary{cursor:pointer;padding:16px 20px;font-weight:700;font-size:19px;list-style:none}
+.vopr summary{position:relative;cursor:pointer;padding:16px 46px 16px 20px;font-weight:700;font-size:19px;list-style:none}
 .vopr summary::-webkit-details-marker{display:none}
-.vopr summary::after{content:"+";float:right;color:var(--akcent);font-weight:400}
+.vopr summary::after{content:"+";position:absolute;right:20px;top:16px;color:var(--akcent);font-weight:400}
 .vopr details[open] summary::after{content:"−"}
 .vopr summary i{font-style:normal;font-weight:400;color:var(--soft);font-size:15px;margin-left:6px}
 .vopr ol{margin:0;padding:0 20px 16px 48px}
@@ -334,7 +334,7 @@ ul.sp li{margin-bottom:8px}
     <details><summary>Карточка шага <i>в подпись и в Telegram</i></summary><ul>
      <li><b>Шаг:</b> прицепить одно новое дело к тому, что и так делаете каждый день: «пока завтракаете - один короткий урок»; будильник - сразу встать и включить свет.</li>
      <li><b>Когда:</b> каждый раз вместе с привычным действием, без отдельного напоминания.</li>
-     <li><b>Сколько:</b> пять минут, Ваши «3-5&nbsp;минут»; не больше, даже если хочется - «долго, но не интенсивно» <span class="sv">сверить</span>.</li>
+     <li><b>Сколько:</b> пять минут, Ваши «3&#8209;5&nbsp;минут»; не больше, даже если хочется - «долго, но не интенсивно» <span class="sv">сверить</span>.</li>
      <li><b>Как отметить:</b> сделали - любимое печенье.</li>
      <li><b>Если забыли:</b> печенье в этот день не едите; завтра цепочка снова с завтрака.</li>
      <li><b>К концу недели заметите:</b> держится ли цепочка без напоминаний.</li>
