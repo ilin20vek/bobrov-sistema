@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<!-- КП-страница. Свод: ai-clone/feedback/kp-stranicy-svod.md. Опоры текста: agentstvo/klienty/bobrov/strategiya.md,
+     sistema-bobrova-pitch.md, cifry.md (03.11), nisha.md (08.11), produkt-rynok.md, produkt-rynok-2.md (10.11). -->
+<title>Дмитрий, канал на Вашей системе</title>
+<meta name="description" content="Стратегия соцсетей на первый год и продукт по подписке «Система Боброва»">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Дмитрий, как канал вырастет на Вашей системе, а система станет продуктом">
+<meta property="og:description" content="Стратегия соцсетей на первый год и продукт по подписке «Система Боброва»">
+<meta property="og:url" content="https://ilin20vek.github.io/bobrov-sistema/">
+<meta property="og:image" content="https://ilin20vek.github.io/bobrov-sistema/i/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+@font-face{font-family:'Sofia Sans';src:url(fonts/sofia-sans-400.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Sofia Sans';src:url(fonts/sofia-sans-700.woff2) format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'SSEC';src:url(fonts/sofia-sans-extra-condensed-800.woff2) format('woff2');font-weight:800;font-display:swap}
+/* Цвета - как на прежней странице Боброва (bobrov-plan), под его сайт. */
+:root{--fon:#0d0b0a;--tekst:#f6f1eb;--soft:#b4a99e;--akcent:#FE6A00;--plashka:#18130f;--plashka2:#241a13;--liniya:rgba(255,190,140,.15)}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fon);color:var(--tekst);font:400 19px/1.5 'Sofia Sans',system-ui,sans-serif}
+/* Свод п.17: основной текст не меньше 17 px, подписи не меньше 14 px. */
+.in{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:64px 0;border-top:1px solid var(--liniya)}
+section.e0{border-top:0}
+h1,h2,h3{font-family:SSEC,'Sofia Sans',sans-serif;font-weight:800;line-height:1.02;margin:0 0 20px}
+h1{font-size:64px} h2{font-size:46px} h3{font-size:28px;margin:0 0 10px}
+.akc{color:var(--akcent)}
+.nom{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--akcent);margin:0 0 12px}
+p{margin:0 0 16px;max-width:36em}
+.pod{font-size:15px;color:var(--soft)}
+ul.sp{margin:0 0 16px;padding-left:22px;max-width:36em}
+ul.sp li{margin-bottom:8px}
+
+/* Первый экран. Свод п.16: надпись не ложится на лицо. */
+.e0{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.e0 .lico{position:absolute;right:0;bottom:0;height:100%;width:auto;max-width:56vw;object-fit:cover;object-position:top center;
+  -webkit-mask-image:linear-gradient(to left,#000 60%,transparent);mask-image:linear-gradient(to left,#000 60%,transparent)}
+.e0 .in{position:relative;width:100%}
+.e0 .tekst{max-width:min(640px,46vw)}
+.emb{width:60px;height:60px;display:block;margin-bottom:28px}
+.obr{font-size:22px;color:var(--akcent);margin-bottom:10px}
+@media (max-width:900px){
+ .e0{display:block;min-height:0}
+ .e0 .lico{position:absolute;top:0;left:0;right:auto;bottom:auto;width:100%;max-width:none;height:auto;aspect-ratio:1/1;
+   -webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent 96%);mask-image:linear-gradient(to bottom,#000 55%,transparent 96%)}
+ .e0 .in{padding-top:84vw;padding-bottom:40px}
+ .e0 .tekst{max-width:640px}
+ .emb{position:absolute;top:20px;left:20px;width:52px;height:52px;z-index:2;margin:0}
+}
+
+/* Плашка-мысль */
+.mysl{background:var(--plashka);border-left:4px solid var(--akcent);border-radius:0 16px 16px 0;padding:22px 26px;margin:24px 0;max-width:40em}
+.mysl p{margin:0;font-size:21px}
+
+/* Таблица «тема → ответ» и этапы: на телефоне строки становятся карточками */
+.tab{width:100%;border-collapse:collapse;margin:20px 0 12px}
+.tab th{text-align:left;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);font-weight:400;padding:0 14px 10px 0;border-bottom:1px solid var(--liniya)}
+.tab td{padding:14px 14px 14px 0;border-bottom:1px solid var(--liniya);vertical-align:top}
+.tab td:first-child{font-weight:700}
+@media (max-width:700px){
+ .tab thead{display:none}
+ .tab,.tab tbody,.tab tr,.tab td{display:block;width:100%}
+ .tab tr{background:var(--plashka);border-radius:14px;padding:16px 18px;margin-bottom:12px}
+ .tab td{border:0;padding:4px 0}
+ .tab td[data-k]::before{content:attr(data-k);display:block;font-size:14px;color:var(--soft);font-weight:400;margin-top:6px}
+}
+
+/* Карточки */
+.kart{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin:20px 0}
+.kart div{background:var(--plashka);border-radius:16px;padding:20px 22px}
+.kart div p{font-size:17px;margin:0}
+.kart .ch{font-family:SSEC,sans-serif;font-weight:800;font-size:44px;line-height:1;color:var(--akcent);margin-bottom:8px}
+
+/* Путь человека */
+.put{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:20px 0}
+.put span{background:var(--plashka2);border-radius:999px;padding:8px 16px;font-size:17px}
+.put b{color:var(--akcent);font-weight:400}
+
+/* Список «решаете Вы» */
+.reshaete{counter-reset:r;list-style:none;padding:0;margin:20px 0;max-width:40em}
+.reshaete li{counter-increment:r;position:relative;padding:0 0 18px 52px}
+.reshaete li::before{content:counter(r);position:absolute;left:0;top:0;font-family:SSEC,sans-serif;font-weight:800;font-size:34px;line-height:1;color:var(--akcent)}
+.reshaete b{display:block}
+
+@media (max-width:640px){
+ body{font-size:17px}
+ h1{font-size:44px} h2{font-size:34px} h3{font-size:24px}
+ section{padding:44px 0}
+ .obr{font-size:19px}
+ .mysl p{font-size:19px}
+}
+
+/* Подпись. Свод п.5 */
+.avtor{display:flex;align-items:center;gap:16px;margin-top:28px}
+.avtor img.f{width:84px;height:84px;border-radius:50%;object-fit:cover}
+.avtor img.e{width:44px;height:44px}
+.avtor b{display:block;font-size:19px}
+.avtor span{font-size:15px;color:var(--soft)}
+</style>
+</head>
+<body>
+
+<!-- 0. Первый экран -->
+<section class="e0">
+ <img class="lico" src="i/lico.webp" alt="Дмитрий Бобров">
+ <div class="in">
+  <img class="emb" src="i/bpr.png" alt="Бизнес по-русски">
+  <div class="tekst">
+   <div class="obr">Дмитрий,</div>
+   <h1>как канал вырастет на Вашей системе, а&nbsp;система станет <span class="akc">продуктом</span></h1>
+   <p class="pod">Стратегия соцсетей на первый год и продукт по подписке. Игорь Ильин, «Бизнес по-русски»</p>
+  </div>
+ </div>
+</section>
+
+<!-- 1. Где Вы сейчас -->
+<section>
+ <div class="in">
+  <p class="nom">Где Вы сейчас</p>
+  <h2>У Вас есть то, чего нет у других блогеров: система, проверенная на себе</h2>
+  <p>В шестнадцать лет Вы 14 недель тренировались по четыре часа в день и выиграли открытый чемпионат Москвы в своём весе. Потом был район, которым Вы руководили, потом экономика и работа в университете. И в Ваших сценариях одна мысль повторяется снова и снова: не мотивация, а система. Я прочитал все шестнадцать, она звучит в семи.</p>
+  <p>Эту мысль я и предлагаю сделать сердцем канала, а потом и продукта.</p>
+  <p class="pod">Сейчас у Вас 211 подписчиков на YouTube и 5&nbsp;216 в Telegram (03.11.2026).</p>
+ </div>
+</section>
+
+<!-- 2. Стратегия соцсетей -->
+<section>
+ <div class="in">
+  <p class="nom">Стратегия на первый год</p>
+  <h2>Первый год канал набирает аудиторию: тема для всех, а ответ - Ваша система</h2>
+  <p>Миллионы смотрят про деньги и работу. Самый большой ролик у «Простой экономики» собрал 15,2 млн просмотров, у Рыбакова - 9,65 млн, у Рызова - 6,85 млн. А ролик Курпатова про прокрастинацию - 443 тыс. (разбор ниши, 08.11.2026).</p>
+  <p>У Вас то же самое. Обычный Ваш ролик про экономику и ИИ собирает около 300 просмотров, про саморазвитие - около 160 (YouTube, 10.11.2026). Ваша ценность правильная, но входить в неё зрителю удобнее через тему, которая волнует всех.</p>
+  <div class="mysl"><p>Ролик начинается с вопроса, который волнует всех, а отвечаете на него Вы - своей системой. Подписчиков приносит вопрос, а подписку держит ответ: такой ответ есть только у Вас.</p></div>
+
+  <h3>Как это выглядит в роликах</h3>
+  <table class="tab">
+   <thead><tr><th>Тема для всех</th><th>Ваш ответ системой</th></tr></thead>
+   <tbody>
+    <tr><td>«ИИ заберёт Вашу работу?»</td><td data-k="Ваш ответ">Вопрос не «отнимет ли», а «кому принадлежит ИИ». Кто перестроился, того не заменят</td></tr>
+    <tr><td>«Маркетплейсы: деньги пойдут сами?»</td><td data-k="Ваш ответ">Сначала понять, где люди теряют деньги, и посчитать цену ошибки до старта</td></tr>
+    <tr><td>«Машина за два миллиона или вклад?»</td><td data-k="Ваш ответ">Считать до решения, а не после. Это и есть система</td></tr>
+    <tr><td>«Почему Вы бросаете зал через две недели»</td><td data-k="Ваш ответ">Правило прибавки и Ваши 14 недель перед чемпионатом Москвы</td></tr>
+    <tr><td>«Начальник-самодур: уходить или терпеть»</td><td data-k="Ваш ответ">Управлять конфликтом, а не терпеть его</td></tr>
+    <tr><td>«Почему асфальт кладут под дождём»</td><td data-k="Ваш ответ">Как принимается решение в большой системе, глазами того, кто руководил районом. Только если Вы готовы об этом говорить</td></tr>
+    <tr><td>«Тренер не поднимет штангу за спортсмена»</td><td data-k="Ваш ответ">Наставник даёт систему, а делаете Вы сами. Этот ролик - мостик к продукту</td></tr>
+   </tbody>
+  </table>
+
+  <h3>Три этапа</h3>
+  <table class="tab">
+   <thead><tr><th>Этап</th><th>Что снимаем</th><th>Куда ведём</th></tr></thead>
+   <tbody>
+    <tr><td>1. Охват</td><td data-k="Что снимаем">Деньги, ИИ и работа, цены и кредиты, «как решают наверху», сила и режим. Примерно 80 % роликов на большие темы, 20 % про спорт и Вашу историю</td><td data-k="Куда ведём">Подписка и Telegram</td></tr>
+    <tr><td>2. Сужение</td><td data-k="Что снимаем">Те же темы, но ответ всё чаще - система: режим, привычки, решения. Примерно поровну</td><td data-k="Куда ведём">Бесплатная неделя системы в Telegram</td></tr>
+    <tr><td>3. Продукт</td><td data-k="Что снимаем">Истории участников, отчёты групп, эфиры. Большие темы остаются, но реже</td><td data-k="Куда ведём">Платный поток</td></tr>
+   </tbody>
+  </table>
+  <p class="pod">Доли и момент перехода - моя оценка. Точнее их покажет проба продукта, о ней ниже.</p>
+
+  <h3>Зачем на канал подписываться</h3>
+  <p>Подписываются не на человека, а на то, что он регулярно даёт. Рекомендую такое обещание канала: <b>выстоять в новой экономике</b>. Деньги и работа меняются быстрее, чем мы привыкли, а Вы каждую неделю объясняете, что происходит, и даёте систему, как в этом остаться сильным.</p>
+  <p>Шапка профиля, как я её вижу: «Экономист, бывший глава района. Что происходит с деньгами и работой - и как остаться сильным. Без мотивации, системой».</p>
+ </div>
+</section>
+
+<!-- 3. Продукт -->
+<section>
+ <div class="in">
+  <p class="nom">Продукт</p>
+  <h2>«Система Боброва»: сотни людей одновременно живут по Вашим правилам</h2>
+  <p>Человек знает, что надо делать: зарядку, учёт денег, главное дело дня. Но не делает, а начав, бросает через неделю. Мотивационный ролик это не лечит: посмотрел, вдохновился, забыл. Людям не хватает не знаний, а ритма и того, кто спросит: «Где отчёт?»</p>
+  <div class="kart">
+   <div><div class="ch">12,6 %</div><p>столько в среднем доходят до конца открытого онлайн-курса без сообщества (221 курс, исследование Jordan, 2015)</p></div>
+   <div><div class="ch">17 %</div><p>столько платных подписчиков приложений остаются через год на месячном тарифе (RevenueCat, 75 000 приложений, 2025)</p></div>
+   <div><div class="ch">66 дней</div><p>за столько в среднем складывается привычка, а не за 21 день (Lally, 2010; обзор 20 исследований Singh, 2024: 59-66 дней)</p></div>
+  </div>
+
+  <h3>У других это уже работает</h3>
+  <ul class="sp">
+   <li><b>75 Hard</b> в США: бесплатный вызов на 75 дней с жёсткими правилами, сорвался - начинаешь с первого дня. По словам автора, его прошли больше миллиона человек.</li>
+   <li><b>Сообщества на Skool</b>: вход бесплатный, платит часть пришедших. У крупнейших 481 тыс. и 149 тыс. участников (страницы сообществ, 10.11.2026).</li>
+   <li><b>Focusmate</b>: человек работает в паре с незнакомцем по видео. Напарник держит лучше силы воли.</li>
+   <li><b>Weight Watchers</b>: платная группа с ведущим. В исследовании Lancet за год участники сбросили 5,06 кг против 2,25 кг у тех, кого вёл врач (2011, 772 человека).</li>
+  </ul>
+  <p>В России деньги тоже идут к подпискам и клубам: только через сервис Tribute оформлено 586 тыс. платных подписок на Telegram-каналы. А вот клуба дисциплины, у которого были бы открыты цена и число участников, мы в России не нашли. Ниша почти пустая, и занять её может человек, который сам жил по системе.</p>
+
+  <h3>Что держит человека</h3>
+  <p>Исследования сходятся на трёх вещах, и всё устройство продукта стоит на них:</p>
+  <ul class="sp">
+   <li><b>Ритм дольше двух месяцев.</b> Привычка складывается к 60-66 дню.</li>
+   <li><b>Люди рядом, которые видят твой отчёт.</b> Ведущим группы может быть обычный выпускник, а не профессионал: в 19 исследованиях групп ходьбы такие ведущие работали не хуже (Kassavou, 2013).</li>
+   <li><b>Общий старт.</b> Курс, который проходят потоком, досматривают до конца 53,4 % против 41,9 %, когда каждый смотрит в своё время (Ruzuku, 1,3 млн записей, 2026).</li>
+  </ul>
+
+  <h3>Как устроено</h3>
+  <div class="put"><span>ролик</span><b>→</b><span>шаг на неделю</span><b>→</b><span>бесплатная «Неделя системы»</span><b>→</b><span>поток 30 дней</span><b>→</b><span>клуб по подписке</span><b>→</b><span>выпускники-наставники</span></div>
+  <div class="kart">
+   <div><h3>Неделя системы</h3><p>7 дней бесплатно в Telegram. Утром короткое видео от Вас с заданием дня, вечером отчёт в чат.</p></div>
+   <div><h3>Поток 30 дней</h3><p>Три правила в день, например тело, деньги, голова. Вечером отметки в боте и счёт дней без срыва. Сорвался - счёт с нуля, но из потока никто не выгоняет.</p></div>
+   <div><h3>Напарник</h3><p>Бот в первый день сводит пары. Напарник видит отчёт и пишет «видел, держись» или «где отчёт?».</p></div>
+   <div><h3>Десятка с наставником</h3><p>10 человек в своём чате и созвон на 30 минут раз в неделю. Первые наставники - Ваша команда, дальше лучшие выпускники.</p></div>
+   <div><h3>Ваш эфир</h3><p>Раз в неделю час: разбор недели, вопросы, история из спорта или из работы в районе.</p></div>
+   <div><h3>Клуб</h3><p>Кто прошёл поток, остаётся по подписке: вызов месяца, эфир, архив. Выпускники ведут десятки новичков.</p></div>
+  </div>
+  <p>Всё живёт в Telegram, где у Вас уже 5&nbsp;216 человек, оплата - через Tribute. Неделя, поток и первый месяц клуба вместе дают около 67 дней ритма: столько, сколько нужно привычке по науке.</p>
+ </div>
+</section>
+
+<!-- 4. Связка контента и продукта -->
+<section>
+ <div class="in">
+  <p class="nom">Как ролики ведут в продукт</p>
+  <h2>Каждый ролик - это первый день системы</h2>
+  <p>Ролик кончается не просьбой поставить лайк, а маленьким делом, которое зритель уносит с собой. Концовка всегда в три хода:</p>
+  <div class="mysl"><p>«Хотите так же? Всё начинается с малого. Сегодня и до конца недели просто делайте зарядку по утрам».</p></div>
+  <p>Шаг каждый раз свой и связан с темой: после ролика про маркетплейсы - до воскресенья выписать три расхода, которые не окупаются. Зритель начинает жить по Вашей системе ещё до того, как узнал, что она есть.</p>
+  <p>Кто продержался неделю, того в Telegram ждёт следующая: бесплатная «Неделя системы». Так от ролика к продукту ведёт одна нить, а не реклама. И темы роликов становятся темами недель потока: тело и режим, деньги, работа и решения, сильный человек.</p>
+  <p>Первое, что для этого нужно поменять: у Вашего Telegram сейчас нет публичного адреса, только закрытая ссылка-приглашение. Зрителю из ролика нужен простой адрес, который легко найти.</p>
+ </div>
+</section>
+
+<!-- 5. Проба в первый год -->
+<section>
+ <div class="in">
+  <p class="nom">Проба</p>
+  <h2>Продукт пробуем рано, на 50-100 людях из Вашего Telegram</h2>
+  <p>Пока канал набирает аудиторию, продукт уже должен быть готов. Поэтому пробуем его рано, на небольшой группе, бесплатно или символически. Задача пробы - не заработать, а увидеть, держит ли система людей, и починить слабые места, пока аудитория растёт. Через год продукт выйдет к ней готовым и проверенным.</p>
+  <p>Смотрим на пять вещей:</p>
+  <ul class="sp">
+   <li>сколько людей зашли на бесплатную неделю;</li>
+   <li>сколько из них пошли в поток;</li>
+   <li>сколько дошли до 30-го дня, держа серию хотя бы 20 дней;</li>
+   <li>сколько остались в клубе через месяц;</li>
+   <li>сколько выпускников готовы вести свою десятку.</li>
+  </ul>
+ </div>
+</section>
+
+<!-- 6. Решаете Вы -->
+<section>
+ <div class="in">
+  <p class="nom">Это решаете Вы</p>
+  <h2>Я даю устройство, а главное остаётся за Вами</h2>
+  <ol class="reshaete">
+   <li><b>Делать ли продукт и сколько времени ему давать.</b>По моей оценке, лёгкий вариант займёт около двух часов в неделю: задания записываются заранее за один-два съёмочных дня, плюс эфир. Полный вариант - 4-5 часов. Эти цифры нужно сверить с Вами.</li>
+   <li><b>Ваши три правила дня.</b>«Тело, деньги, голова» - только заготовка. Правила должны быть Вашими и Вашими словами.</li>
+   <li><b>Название.</b>«Система Боброва» - рабочее.</li>
+   <li><b>Цена.</b>Для ориентира: средний ежемесячный платёж в клубах на GetCourse, по данным самой платформы, 2&nbsp;590 ₽. Я бы начинал с бесплатной недели, потока за 990-1&nbsp;490 ₽ и клуба за 990 ₽ в месяц, а точнее покажет проба.</li>
+   <li><b>Обещание канала.</b>Я рекомендую «выстоять в новой экономике», но формулировка Ваша.</li>
+   <li><b>О чём из биографии говорить.</b>Район, спорт, титулы - только то, что Вы сами захотите рассказать и подтвердите.</li>
+   <li><b>Как платный проект совмещается с Вашей работой в университете.</b>Это до запуска проверим с юристом.</li>
+  </ol>
+ </div>
+</section>
+
+<!-- 7. Концовка и подпись -->
+<section>
+ <div class="in">
+  <h2>Ваша система уже работает - на Вас. Давайте сделаем так, чтобы по ней жили тысячи</h2>
+  <p>Предлагаю созвониться на полчаса. Вы расскажете свои три правила, а я покажу первые сценарии роликов, с которых канал начнёт эту историю.</p>
+  <div class="avtor">
+   <img class="f" src="i/igor.webp" alt="Игорь Ильин">
+   <div><b>Игорь Ильин</b><span>«Бизнес по-русски»</span></div>
+   <img class="e" src="i/bpr.png" alt="">
+  </div>
+ </div>
+</section>
+
+</body>
+</html>
