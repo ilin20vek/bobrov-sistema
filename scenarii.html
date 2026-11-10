@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<!-- КП-страница. Свод: ai-clone/feedback/kp-stranicy-svod.md. Опоры текста: agentstvo/klienty/bobrov/strategiya.md,
+     sistema-bobrova-pitch.md, cifry.md (03.11), nisha.md (08.11), produkt-rynok.md, produkt-rynok-2.md (10.11). -->
+<title>Пять сценариев</title>
+<style>
+@font-face{font-family:'Sofia Sans';src:url(fonts/sofia-sans-400.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Sofia Sans';src:url(fonts/sofia-sans-700.woff2) format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'SSEC';src:url(fonts/sofia-sans-extra-condensed-800.woff2) format('woff2');font-weight:800;font-display:swap}
+/* Цвета - как на прежней странице Боброва (bobrov-plan), под его сайт. */
+:root{--fon:#0d0b0a;--tekst:#f6f1eb;--soft:#b4a99e;--akcent:#FE6A00;--plashka:#18130f;--plashka2:#241a13;--liniya:rgba(255,190,140,.15)}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fon);color:var(--tekst);font:400 19px/1.5 'Sofia Sans',system-ui,sans-serif}
+/* Свод п.17: основной текст не меньше 17 px, подписи не меньше 14 px. */
+.in{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:64px 0;border-top:1px solid var(--liniya)}
+section.e0{border-top:0}
+h1,h2,h3{font-family:SSEC,'Sofia Sans',sans-serif;font-weight:800;line-height:1.02;margin:0 0 20px}
+h1{font-size:64px} h2{font-size:46px} h3{font-size:28px;margin:0 0 10px}
+.akc{color:var(--akcent)}
+.nom{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--akcent);margin:0 0 12px}
+p{margin:0 0 16px;max-width:36em}
+.pod{font-size:15px;color:var(--soft)}
+ul.sp{margin:0 0 16px;padding-left:22px;max-width:36em}
+ul.sp li{margin-bottom:8px}
+
+/* Первый экран. Свод п.16: надпись не ложится на лицо. */
+.e0{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.e0 .lico{position:absolute;right:0;bottom:0;height:100%;width:auto;max-width:56vw;object-fit:cover;object-position:top center;
+  -webkit-mask-image:linear-gradient(to left,#000 60%,transparent);mask-image:linear-gradient(to left,#000 60%,transparent)}
+.e0 .in{position:relative;width:100%}
+.e0 .tekst{max-width:min(640px,46vw)}
+.emb{width:60px;height:60px;display:block;margin-bottom:28px}
+.obr{font-size:22px;color:var(--akcent);margin-bottom:10px}
+@media (max-width:900px){
+ .e0{display:block;min-height:0}
+ .e0 .lico{position:absolute;top:0;left:0;right:auto;bottom:auto;width:100%;max-width:none;height:auto;aspect-ratio:1/1;
+   -webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent 96%);mask-image:linear-gradient(to bottom,#000 55%,transparent 96%)}
+ .e0 .in{padding-top:84vw;padding-bottom:40px}
+ .e0 .tekst{max-width:640px}
+ .emb{position:absolute;top:20px;left:20px;width:52px;height:52px;z-index:2;margin:0}
+}
+
+/* Плашка-мысль */
+.mysl{background:var(--plashka);border-left:4px solid var(--akcent);border-radius:0 16px 16px 0;padding:22px 26px;margin:24px 0;max-width:40em}
+.mysl p{margin:0;font-size:21px}
+
+/* Таблица «тема → ответ» и этапы: на телефоне строки становятся карточками */
+.tab{width:100%;border-collapse:collapse;margin:20px 0 12px}
+.tab th{text-align:left;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);font-weight:400;padding:0 14px 10px 0;border-bottom:1px solid var(--liniya)}
+.tab td{padding:14px 14px 14px 0;border-bottom:1px solid var(--liniya);vertical-align:top}
+.tab td:first-child{font-weight:700}
+@media (max-width:700px){
+ .tab thead{display:none}
+ .tab,.tab tbody,.tab tr,.tab td{display:block;width:100%}
+ .tab tr{background:var(--plashka);border-radius:14px;padding:16px 18px;margin-bottom:12px}
+ .tab td{border:0;padding:4px 0}
+ .tab td[data-k]::before{content:attr(data-k);display:block;font-size:14px;color:var(--soft);font-weight:400;margin-top:6px}
+}
+
+/* Карточки */
+.kart{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin:20px 0}
+.kart>div{background:var(--plashka);border-radius:16px;padding:20px 22px}
+.kart>div p{font-size:17px;margin:0}
+.kart .ch{font-family:SSEC,sans-serif;font-weight:800;font-size:44px;line-height:1;color:var(--akcent);margin-bottom:8px}
+
+/* Путь человека */
+.put{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:20px 0}
+.put span{background:var(--plashka2);border-radius:999px;padding:8px 16px;font-size:17px}
+.put b{color:var(--akcent);font-weight:400}
+
+/* Список «решаете Вы» */
+.reshaete{counter-reset:r;list-style:none;padding:0;margin:20px 0;max-width:40em}
+.reshaete li{counter-increment:r;position:relative;padding:0 0 18px 52px}
+.reshaete li::before{content:counter(r);position:absolute;left:0;top:0;font-family:SSEC,sans-serif;font-weight:800;font-size:34px;line-height:1;color:var(--akcent)}
+.reshaete b{display:block}
+
+@media (max-width:640px){
+ body{font-size:17px}
+ h1{font-size:44px} h2{font-size:34px} h3{font-size:24px}
+ section{padding:44px 0}
+ .obr{font-size:19px}
+ .mysl p{font-size:19px}
+}
+
+/* Вопросы интервью: блоки раскрываются */
+.vopr details{background:var(--plashka);border-radius:14px;margin:10px 0;max-width:44em}
+.vopr summary{position:relative;cursor:pointer;padding:16px 46px 16px 20px;font-weight:700;font-size:19px;list-style:none}
+.vopr summary::-webkit-details-marker{display:none}
+.vopr summary::after{content:"+";position:absolute;right:20px;top:16px;color:var(--akcent);font-weight:400}
+.vopr details[open] summary::after{content:"−"}
+.vopr summary i{font-style:normal;font-weight:400;color:var(--soft);font-size:15px;margin-left:6px}
+.vopr ol{margin:0;padding:0 20px 16px 48px}
+.vopr li{margin-bottom:10px}
+
+.scen{border-top:1px solid var(--liniya);padding:30px 0 10px;margin-top:10px}
+.scen-t{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);margin:0 0 10px}
+.scen-k{font-weight:700;margin:22px 0 0}
+.scen .mysl{margin-top:10px}
+.sv{display:inline-block;font-size:14px;line-height:1.5;padding:0 8px;border-radius:8px;background:var(--plashka2);color:var(--akcent);white-space:nowrap;vertical-align:1px}
+.vopr ul{margin:0;padding:0 20px 16px 40px}
+.vopr .rech{margin:0;padding:0 20px 18px;color:var(--soft)}
+/* Подпись. Свод п.5 */
+.avtor{display:flex;align-items:center;gap:16px;margin-top:28px}
+.avtor img.f{width:84px;height:84px;border-radius:50%;object-fit:cover}
+.avtor img.e{width:44px;height:44px}
+.avtor b{display:block;font-size:19px}
+.avtor span{font-size:15px;color:var(--soft)}
+
+.dalee{display:inline-flex;align-items:center;gap:10px;margin:14px 0 4px;padding:14px 22px;border-radius:14px;background:var(--plashka2);color:var(--tekst);text-decoration:none;font-weight:700;font-size:19px;border:1.5px solid var(--liniya)}
+.dalee b{color:var(--akcent);font-weight:400}
+.nazad{display:inline-block;margin:28px 0 0;color:var(--soft);text-decoration:none;font-size:17px}
+.svyaz{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 12px}
+.knopka{display:inline-flex;align-items:center;gap:10px;min-height:56px;padding:14px 26px;border-radius:14px;background:var(--akcent);color:#1a0c02;font:700 19px/1 'Sofia Sans',sans-serif;text-decoration:none}
+.knopka.vt{background:transparent;color:var(--tekst);border:1.5px solid var(--liniya)}
+.knopka svg{width:22px;height:22px;flex:none}
+.nw{white-space:nowrap}
+.karta{list-style:none;counter-reset:k;padding:0;margin:28px 0 0;max-width:40em}
+.karta li{counter-increment:k;position:relative;padding:0 0 14px 46px;font-size:19px}
+.karta li::before{content:counter(k);position:absolute;left:0;top:-2px;font-family:SSEC,sans-serif;font-weight:800;font-size:30px;line-height:1;color:var(--akcent)}
+.karta a{color:var(--tekst)}
+.vopr .ap{margin:0;padding:0 20px 18px;color:var(--soft);font-size:17px}
+.vopr .av{margin:0;padding:0 20px 10px}
+.vopr summary b{color:var(--akcent);margin-right:10px}
+.ana{margin:8px 0 0;padding-left:22px;max-width:40em}
+.ana li{margin-bottom:8px}
+.str{padding-top:40px}
+</style>
+</head>
+<body>
+<section class="str"><div class="in">
+ <a class="nazad" href="./">← Дорожная карта</a>
+ <p class="nom" style="margin-top:28px">Примеры роликов</p>
+ <h2>Пять роликов: широкая тема на входе, Ваша система на выходе</h2>
+
+<p>Три ролика охватные: их темы знакомы почти всем. Два - на подписку: в них Ваша история из спорта. Всё, что в кавычках и в речи, взято из Ваших роликов. Где пометка <span class="sv">сверить</span>, это моё допущение: Вы подтверждаете или меняете.</p>
+  <div class="scen">
+   <p class="scen-t">Ролик 1 · охватный · 39&nbsp;с</p>
+   <h3>«С понедельника вы не начнёте. И сила воли тут ни при чём.»</h3>
+   <p>Срыв не повод ждать понедельника, если правило не «каждый день», а «не два пустых дня подряд».</p>
+   <p class="scen-k">Решение в конце ролика</p>
+   <div class="mysl"><p>«Сегодня и до конца недели - одно дело, пять минут, в одно время. Скажем, в семь утра надели кроссовки, вышли из подъезда - и всё. Сделали - крестик. Пропустили день - завтра обязательно.»</p></div>
+   <div class="vopr">
+    <details><summary>Карточка шага <i>в подпись и в Telegram</i></summary><ul>
+     <li><b>Шаг:</b> одно дело каждый день, маленький ритуал: «в 7:00 надеваю кроссовки, выхожу из подъезда… и всё»; для начинающего - «10-минутная прогулка быстрым шагом».</li>
+     <li><b>Когда:</b> в одно и то же время, прицепить к будильнику или завтраку.</li>
+     <li><b>Сколько:</b> пять минут, не больше десяти <span class="sv">сверить</span>; в первую неделю важен не результат, а отладить процесс.</li>
+     <li><b>Как отметить:</b> крестик в бумажном календаре сразу после дела.</li>
+     <li><b>Если пропустили:</b> завтра обязательно; два пустых дня подряд - никогда.</li>
+     <li><b>К концу недели заметите:</b> были ли у вас два пустых дня подряд - это видно по календарю без подсчётов.</li>
+    </ul></details>
+    <details><summary>Речь целиком</summary><p class="rech">С понедельника вы не начнёте. И сила воли тут ни при чём. Понедельник - это обещание начать идеально. Сорвались в четверг - и ждёте следующего понедельника. В юности я профессионально занимался спортом, и идеальных недель там не бывает. Поэтому правило у меня другое: отклониться от плана можно, но никогда - два дня подряд. Один день - это сбой сервера. Два дня подряд - уже системный вирус. Хотите так же? Всё начинается с малого. Сегодня и до конца недели - одно дело, пять минут, в одно время. Скажем, в семь утра надели кроссовки, вышли из подъезда - и всё. Сделали - крестик. Пропустили день - завтра обязательно.</p></details>
+   </div>
+  </div>
+  <div class="scen">
+   <p class="scen-t">Ролик 2 · охватный · 43&nbsp;с</p>
+   <h3>«Вы не ленивый. Вы просто делаете лёгкое первым.»</h3>
+   <p>Откладывание - не лень, а порядок дел; меняется порядком, а не силой воли.</p>
+   <p class="scen-k">Решение в конце ролика</p>
+   <div class="mysl"><p>«Сегодня и до конца недели первые десять минут дня - делу, которое висит дольше всех. Не «написать отчёт», а первое предложение. Написали - день засчитан, даже если плохо.»</p></div>
+   <div class="vopr">
+    <details><summary>Карточка шага <i>в подпись и в Telegram</i></summary><ul>
+     <li><b>Шаг:</b> вход в самое неприятное дело, порог «почти до абсурда»: одно предложение в файле, один звонок, «который просто состоится, даже если скажете не ту фразу», одна вещь на место.</li>
+     <li><b>Когда:</b> первые десять минут дня, до почты и мелочей <span class="sv">сверить</span>.</li>
+     <li><b>Сколько:</b> десять минут; хотите дальше - продолжайте, но засчитан уже вход.</li>
+     <li><b>Как отметить:</b> «вход сделан» - галочка у дела в заметках.</li>
+     <li><b>Если пропустили:</b> не винить себя, завтра оно снова первое; мелочам, которые съедают утро, - отдельное время позже.</li>
+     <li><b>К концу недели заметите:</b> сдвинулось ли с места дело, которое висело дольше всех.</li>
+    </ul></details>
+    <details><summary>Речь целиком</summary><p class="rech">Вы не ленивый. Вы просто делаете лёгкое первым. В заметках четырнадцать дел, а самое важное висит с прошлой недели. У меня это с начальной школы. Сперва делал лёгкие уроки, а сложные - на потом. Ленивым я не был. Но на важные уроки времени не хватало. Пока в четвёртом классе не начал заниматься спортом и строго соблюдать режим дня. Откладывание - это не лень, это эмоциональная защита. Её обходят порядком: неприятное - первым, и вход - одно предложение. Хотите так же? Всё начинается с малого. Сегодня и до конца недели первые десять минут дня - делу, которое висит дольше всех. Не «написать отчёт», а первое предложение. Написали - день засчитан, даже если плохо.</p></details>
+   </div>
+  </div>
+  <div class="scen">
+   <p class="scen-t">Ролик 3 · охватный · 48&nbsp;с</p>
+   <h3>«Десять целей на год - это ноль целей.»</h3>
+   <p>План на год бросают из-за длины списка; оставить три цели помогает один вопрос.</p>
+   <p class="scen-k">Решение в конце ролика</p>
+   <div class="mysl"><p>«Сегодня вечером задайте этот вопрос каждой цели, оставьте три. До конца недели - план первой по часам: понедельник, десять утра - звонок наставнику. В пятницу - итоги. Не сделали - режьте шаг мельче.»</p></div>
+   <div class="vopr">
+    <details><summary>Карточка шага <i>в подпись и в Telegram</i></summary><ul>
+     <li><b>Шаг:</b> вопрос «дождливого вечера» каждой цели, оставить три; у первой - план недели с днём и часом: «В понедельник 10:00 - звонок наставнику. В среду 15:00 - отправить резюме в три компании. В пятницу - подвести итоги».</li>
+     <li><b>Когда:</b> сегодня вечером; план - в тот же вечер.</li>
+     <li><b>Сколько:</b> около 15&nbsp;минут на лист и план <span class="sv">сверить</span>.</li>
+     <li><b>Как отметить:</b> сделанное вычеркнуть в плане; в пятницу - итоги.</li>
+     <li><b>Если не сделали:</b> цель слишком амбициозна, разбейте на шаги мельче; план - не догма, а инструмент. Пример малого шага - 10-минутная прогулка быстрым шагом.</li>
+     <li><b>К концу недели заметите:</b> какая из трёх целей проходит дождливый вечер на деле, а не на бумаге.</li>
+    </ul></details>
+    <details><summary>Речь целиком</summary><p class="rech">Десять целей на год - это ноль целей. Знакомый сказал мне: «Управляю заводом с оборотом в миллиард. А собой управлять не умею». Вы пишете: выучить английский, похудеть, заработать миллион, начать бегать. Через два месяца план брошен. Я задаю каждой цели один вопрос: готов ли я делать это дождливым вечером, когда устал и никто меня не контролирует? Нет - вычёркиваю. Остаются три-пять. А дальше не год, а неделя: что я сделаю к воскресенью. Хотите так же? Всё начинается с малого. Сегодня вечером задайте этот вопрос каждой цели, оставьте три. До конца недели - план первой по часам: понедельник, десять утра - звонок наставнику. В пятницу - итоги. Не сделали - режьте шаг мельче.</p></details>
+   </div>
+  </div>
+  <div class="scen">
+   <p class="scen-t">Ролик 4 · на подписку · 52&nbsp;с</p>
+   <h3>«Я проиграл, потому что тренировался слишком много.»</h3>
+   <p>Провал разбирается холодной головой и чинится в системе, а не в характере.</p>
+   <p class="scen-k">Решение в конце ролика</p>
+   <div class="mysl"><p>«Сегодня и до конца недели вечером запишите одной строкой, что не вышло. Утром спросите: где система дала сбой, что перестроить, а не попробовать ещё раз? Ещё злитесь - отложите на день.»</p></div>
+   <div class="vopr">
+    <details><summary>Карточка шага <i>в подпись и в Telegram</i></summary><ul>
+     <li><b>Шаг:</b> вечером одна строка-факт «что не вышло», без оценок; утром разбор Вашими вопросами: где система дала сбой, где переоценил себя, людей, реальность, что перестроить, а не попробовать ещё раз.</li>
+     <li><b>Когда:</b> строка - вечером, разбор - утром.</li>
+     <li><b>Сколько:</b> строка - 2&nbsp;минуты, разбор - 5&nbsp;минут <span class="sv">сверить</span>.</li>
+     <li><b>Как отметить:</b> под строкой - вторая: «что перестраиваю».</li>
+     <li><b>Если ещё злитесь:</b> перенесите разбор на день - «пока я в эмоциях, я не анализирую».</li>
+     <li><b>К концу недели заметите:</b> повторяется ли причина и какая она - сбой исполнения или сбой системы (тактический или системный провал).</li>
+    </ul></details>
+    <details><summary>Речь целиком</summary><p class="rech">Я проиграл, потому что тренировался слишком много. Чемпионат Москвы, девяносто шестой год. Знакомо? Проиграли - и хочется всё бросить или найти виноватого. Но пока я в эмоциях, я не анализирую. Остыл - и стал разбирать. Сбой дала сама система тренировок. Я тренировался слишком часто, и организм просто не успевал восстановиться. Мне не силы не хватило - системе не хватило отдыха. Потом я не раз побеждал на российских и международных турнирах. Хотите так же? Всё начинается с малого. Сегодня и до конца недели вечером запишите одной строкой, что не вышло. Утром спросите: где система дала сбой, что перестроить, а не попробовать ещё раз? Ещё злитесь - отложите на день. Провал - это точка пересборки. Здесь каждую неделю - одно правило из спорта, которое работает в работе и деньгах. Подпишитесь.</p></details>
+   </div>
+  </div>
+  <div class="scen">
+   <p class="scen-t">Ролик 5 · на подписку · 51&nbsp;с</p>
+   <h3>«В шестнадцать лет я тренировался по четыре часа в день. Четырнадцать недель подряд.»</h3>
+   <p>Результат дал не надрыв, а правило тренера; на всю жизнь работает «понемногу, но каждый день».</p>
+   <p class="scen-k">Решение в конце ролика</p>
+   <div class="mysl"><p>«Сегодня и до конца недели прицепите одно дело к привычному. Завтрак - и урок языка на пять минут. Не больше, даже если хочется. Сделали - любимое печенье. Забыли - без печенья.»</p></div>
+   <div class="vopr">
+    <details><summary>Карточка шага <i>в подпись и в Telegram</i></summary><ul>
+     <li><b>Шаг:</b> прицепить одно новое дело к тому, что и так делаете каждый день: «пока завтракаете - один короткий урок»; будильник - сразу встать и включить свет.</li>
+     <li><b>Когда:</b> каждый раз вместе с привычным действием, без отдельного напоминания.</li>
+     <li><b>Сколько:</b> пять минут, Ваши «3&#8209;5&nbsp;минут»; не больше, даже если хочется - «долго, но не интенсивно» <span class="sv">сверить</span>.</li>
+     <li><b>Как отметить:</b> сделали - любимое печенье.</li>
+     <li><b>Если забыли:</b> печенье в этот день не едите; завтра цепочка снова с завтрака.</li>
+     <li><b>К концу недели заметите:</b> держится ли цепочка без напоминаний.</li>
+    </ul></details>
+    <details><summary>Речь целиком</summary><p class="rech">В шестнадцать лет я тренировался по четыре часа в день. Четырнадцать недель подряд. Цель - открытый чемпионат Москвы. На первых в жизни соревнованиях победил в своей весовой категории и стал вторым в абсолютной. Но это не про силу воли. Мой тренер Владимир Турчинский говорил: можно работать интенсивно, но недолго, или долго, но не интенсивно. Долго и интенсивно - это путь к травме. Четырнадцать недель - это было «интенсивно, но недолго». А на всю жизнь годится другое: понемногу, но каждый день. Хотите так же? Всё начинается с малого. Сегодня и до конца недели прицепите одно дело к привычному. Завтрак - и урок языка на пять минут. Не больше, даже если хочется. Сделали - любимое печенье. Забыли - без печенья. Дальше - как я перенёс правила тренера в работу и деньги. Подпишитесь.</p></details>
+   </div>
+  </div>
+ 
+
+ <div class="svyaz"><a class="knopka" href="https://t.me/ingvarcrypto" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.5 3.6 2.9 10.8c-1.3.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.6c.2.7.4.9.9.9.4 0 .6-.2.9-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.7c.3-1.3-.5-1.9-1.5-1.5zM8.3 13.4l9.5-6c.4-.3.9-.1.5.3l-7.8 7.1-.3 3.3z" fill="currentColor"/></svg>Telegram</a><a class="knopka vt" href="tel:+79166457381"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z" fill="currentColor"/></svg><span class="nw">+7 916 645-73-81</span></a></div>
+ <a class="nazad" href="./">← Вернуться к дорожной карте</a>
+</div></section>
+</body>
+</html>

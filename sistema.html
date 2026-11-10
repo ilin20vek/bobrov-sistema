@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<!-- КП-страница. Свод: ai-clone/feedback/kp-stranicy-svod.md. Опоры текста: agentstvo/klienty/bobrov/strategiya.md,
+     sistema-bobrova-pitch.md, cifry.md (03.11), nisha.md (08.11), produkt-rynok.md, produkt-rynok-2.md (10.11). -->
+<title>Вопросы о системе</title>
+<style>
+@font-face{font-family:'Sofia Sans';src:url(fonts/sofia-sans-400.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Sofia Sans';src:url(fonts/sofia-sans-700.woff2) format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'SSEC';src:url(fonts/sofia-sans-extra-condensed-800.woff2) format('woff2');font-weight:800;font-display:swap}
+/* Цвета - как на прежней странице Боброва (bobrov-plan), под его сайт. */
+:root{--fon:#0d0b0a;--tekst:#f6f1eb;--soft:#b4a99e;--akcent:#FE6A00;--plashka:#18130f;--plashka2:#241a13;--liniya:rgba(255,190,140,.15)}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fon);color:var(--tekst);font:400 19px/1.5 'Sofia Sans',system-ui,sans-serif}
+/* Свод п.17: основной текст не меньше 17 px, подписи не меньше 14 px. */
+.in{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:64px 0;border-top:1px solid var(--liniya)}
+section.e0{border-top:0}
+h1,h2,h3{font-family:SSEC,'Sofia Sans',sans-serif;font-weight:800;line-height:1.02;margin:0 0 20px}
+h1{font-size:64px} h2{font-size:46px} h3{font-size:28px;margin:0 0 10px}
+.akc{color:var(--akcent)}
+.nom{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--akcent);margin:0 0 12px}
+p{margin:0 0 16px;max-width:36em}
+.pod{font-size:15px;color:var(--soft)}
+ul.sp{margin:0 0 16px;padding-left:22px;max-width:36em}
+ul.sp li{margin-bottom:8px}
+
+/* Первый экран. Свод п.16: надпись не ложится на лицо. */
+.e0{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.e0 .lico{position:absolute;right:0;bottom:0;height:100%;width:auto;max-width:56vw;object-fit:cover;object-position:top center;
+  -webkit-mask-image:linear-gradient(to left,#000 60%,transparent);mask-image:linear-gradient(to left,#000 60%,transparent)}
+.e0 .in{position:relative;width:100%}
+.e0 .tekst{max-width:min(640px,46vw)}
+.emb{width:60px;height:60px;display:block;margin-bottom:28px}
+.obr{font-size:22px;color:var(--akcent);margin-bottom:10px}
+@media (max-width:900px){
+ .e0{display:block;min-height:0}
+ .e0 .lico{position:absolute;top:0;left:0;right:auto;bottom:auto;width:100%;max-width:none;height:auto;aspect-ratio:1/1;
+   -webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent 96%);mask-image:linear-gradient(to bottom,#000 55%,transparent 96%)}
+ .e0 .in{padding-top:84vw;padding-bottom:40px}
+ .e0 .tekst{max-width:640px}
+ .emb{position:absolute;top:20px;left:20px;width:52px;height:52px;z-index:2;margin:0}
+}
+
+/* Плашка-мысль */
+.mysl{background:var(--plashka);border-left:4px solid var(--akcent);border-radius:0 16px 16px 0;padding:22px 26px;margin:24px 0;max-width:40em}
+.mysl p{margin:0;font-size:21px}
+
+/* Таблица «тема → ответ» и этапы: на телефоне строки становятся карточками */
+.tab{width:100%;border-collapse:collapse;margin:20px 0 12px}
+.tab th{text-align:left;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);font-weight:400;padding:0 14px 10px 0;border-bottom:1px solid var(--liniya)}
+.tab td{padding:14px 14px 14px 0;border-bottom:1px solid var(--liniya);vertical-align:top}
+.tab td:first-child{font-weight:700}
+@media (max-width:700px){
+ .tab thead{display:none}
+ .tab,.tab tbody,.tab tr,.tab td{display:block;width:100%}
+ .tab tr{background:var(--plashka);border-radius:14px;padding:16px 18px;margin-bottom:12px}
+ .tab td{border:0;padding:4px 0}
+ .tab td[data-k]::before{content:attr(data-k);display:block;font-size:14px;color:var(--soft);font-weight:400;margin-top:6px}
+}
+
+/* Карточки */
+.kart{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin:20px 0}
+.kart>div{background:var(--plashka);border-radius:16px;padding:20px 22px}
+.kart>div p{font-size:17px;margin:0}
+.kart .ch{font-family:SSEC,sans-serif;font-weight:800;font-size:44px;line-height:1;color:var(--akcent);margin-bottom:8px}
+
+/* Путь человека */
+.put{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:20px 0}
+.put span{background:var(--plashka2);border-radius:999px;padding:8px 16px;font-size:17px}
+.put b{color:var(--akcent);font-weight:400}
+
+/* Список «решаете Вы» */
+.reshaete{counter-reset:r;list-style:none;padding:0;margin:20px 0;max-width:40em}
+.reshaete li{counter-increment:r;position:relative;padding:0 0 18px 52px}
+.reshaete li::before{content:counter(r);position:absolute;left:0;top:0;font-family:SSEC,sans-serif;font-weight:800;font-size:34px;line-height:1;color:var(--akcent)}
+.reshaete b{display:block}
+
+@media (max-width:640px){
+ body{font-size:17px}
+ h1{font-size:44px} h2{font-size:34px} h3{font-size:24px}
+ section{padding:44px 0}
+ .obr{font-size:19px}
+ .mysl p{font-size:19px}
+}
+
+/* Вопросы интервью: блоки раскрываются */
+.vopr details{background:var(--plashka);border-radius:14px;margin:10px 0;max-width:44em}
+.vopr summary{position:relative;cursor:pointer;padding:16px 46px 16px 20px;font-weight:700;font-size:19px;list-style:none}
+.vopr summary::-webkit-details-marker{display:none}
+.vopr summary::after{content:"+";position:absolute;right:20px;top:16px;color:var(--akcent);font-weight:400}
+.vopr details[open] summary::after{content:"−"}
+.vopr summary i{font-style:normal;font-weight:400;color:var(--soft);font-size:15px;margin-left:6px}
+.vopr ol{margin:0;padding:0 20px 16px 48px}
+.vopr li{margin-bottom:10px}
+
+.scen{border-top:1px solid var(--liniya);padding:30px 0 10px;margin-top:10px}
+.scen-t{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);margin:0 0 10px}
+.scen-k{font-weight:700;margin:22px 0 0}
+.scen .mysl{margin-top:10px}
+.sv{display:inline-block;font-size:14px;line-height:1.5;padding:0 8px;border-radius:8px;background:var(--plashka2);color:var(--akcent);white-space:nowrap;vertical-align:1px}
+.vopr ul{margin:0;padding:0 20px 16px 40px}
+.vopr .rech{margin:0;padding:0 20px 18px;color:var(--soft)}
+/* Подпись. Свод п.5 */
+.avtor{display:flex;align-items:center;gap:16px;margin-top:28px}
+.avtor img.f{width:84px;height:84px;border-radius:50%;object-fit:cover}
+.avtor img.e{width:44px;height:44px}
+.avtor b{display:block;font-size:19px}
+.avtor span{font-size:15px;color:var(--soft)}
+
+.dalee{display:inline-flex;align-items:center;gap:10px;margin:14px 0 4px;padding:14px 22px;border-radius:14px;background:var(--plashka2);color:var(--tekst);text-decoration:none;font-weight:700;font-size:19px;border:1.5px solid var(--liniya)}
+.dalee b{color:var(--akcent);font-weight:400}
+.nazad{display:inline-block;margin:28px 0 0;color:var(--soft);text-decoration:none;font-size:17px}
+.svyaz{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 12px}
+.knopka{display:inline-flex;align-items:center;gap:10px;min-height:56px;padding:14px 26px;border-radius:14px;background:var(--akcent);color:#1a0c02;font:700 19px/1 'Sofia Sans',sans-serif;text-decoration:none}
+.knopka.vt{background:transparent;color:var(--tekst);border:1.5px solid var(--liniya)}
+.knopka svg{width:22px;height:22px;flex:none}
+.nw{white-space:nowrap}
+.karta{list-style:none;counter-reset:k;padding:0;margin:28px 0 0;max-width:40em}
+.karta li{counter-increment:k;position:relative;padding:0 0 14px 46px;font-size:19px}
+.karta li::before{content:counter(k);position:absolute;left:0;top:-2px;font-family:SSEC,sans-serif;font-weight:800;font-size:30px;line-height:1;color:var(--akcent)}
+.karta a{color:var(--tekst)}
+.vopr .ap{margin:0;padding:0 20px 18px;color:var(--soft);font-size:17px}
+.vopr .av{margin:0;padding:0 20px 10px}
+.vopr summary b{color:var(--akcent);margin-right:10px}
+.ana{margin:8px 0 0;padding-left:22px;max-width:40em}
+.ana li{margin-bottom:8px}
+.str{padding-top:40px}
+</style>
+</head>
+<body>
+<section class="str"><div class="in">
+ <a class="nazad" href="./">← Дорожная карта</a>
+ <p class="nom" style="margin-top:28px">Для продукта</p>
+ <h2>41 вопросов о Вашей системе</h2>
+<p>Здесь не о Вас, а о самой системе: из чего она состоит, как Вы живёте по ней день и год, с чего начать новичку, что делать при срыве. Из ответов мы соберём задания продукта, а темы роликов станут темами недель клуба.</p>
+<p>Отвечайте голосом или текстом в Telegram, по одному сообщению на вопрос, с номером в начале. Случай из жизни лучше общих слов. Удобнее за 3-4 захода по полчаса, по блоку-двум за раз. Вопрос не подходит - пропустите. Можно и созвоном на час: я спрашиваю, Вы рассказываете, запись мы расшифруем.</p>
+<p class="pod">Что уже спрошено в 15 вопросах для роликов, здесь не повторяется.</p>
+<div class="vopr">
+ <details><summary>Что такое система <i>6&nbsp;вопр.</i></summary><ol start="1"><li>Что Вы называете системой? Объясните так, как объяснили бы пятнадцатилетнему.</li><li>Чем система отличается от мотивации, силы воли и дисциплины? Вы как-то сказали, что сверхдисциплинированным себя назвать не можете. Тогда на чём всё держится?</li><li>Если нарисовать Вашу систему на одном листе, что там будет? Из каких частей она состоит?</li><li>Назовите три правила, без которых Вашей системы нет. Одной фразой каждое.</li><li>Когда Вы впервые поняли, что живёте по системе? Расскажите этот случай.</li><li>Что система Вам дала? Что было бы с Вами без неё?</li></ol></details>
+ <details><summary>Как жить: день, неделя, год <i>6&nbsp;вопр.</i></summary><ol start="7"><li>Расскажите свой обычный будний день по часам: подъём, первое дело, еда, тренировка, работа, вечер, сон.</li><li>Чем отличается Ваш выходной?</li><li>Как Вы планируете неделю: когда, на чём (бумага, телефон, в голове), сколько это занимает?</li><li>Как Вы ставите цели на год и как проверяете, что не бросили их?</li><li>Что Вы делаете каждый день без исключений? А что спокойно пропускаете?</li><li>День развалился: болезнь, командировка, аврал. Что Вы делаете с системой в такой день?</li></ol></details>
+ <details><summary>Система в каждой сфере <i>7&nbsp;вопр.</i></summary><ol start="13"><li>Тело. Как Вы тренируетесь сейчас, как едите, сколько спите? Что поменялось с возрастом?</li><li>Деньги. Как устроены Ваши личные деньги: учёт, запас, долги, вложения? С чего начинать человеку, у которого денег всегда не хватает?</li><li>Работа и решения. Как Вы принимаете трудные решения? Как планируете рабочий день и как отказываете?</li><li>Голова. Что Вы делаете со страхом, злостью, усталостью? Вы говорили про «тигра в голове» - как с ним жить?</li><li>Близкие. Как система уживается с семьёй и друзьями? Можно ли жить по системе, если домашние живут иначе? (Отвечайте, только если хотите говорить о семье.)</li><li>Окружение. Как люди вокруг влияют на систему? От кого Вы отходили и почему?</li><li>Учёба. Как Вы учитесь новому сейчас? Что читаете, у кого учитесь?</li></ol></details>
+ <details><summary>Как внедрять: с нуля и навсегда <i>8&nbsp;вопр.</i></summary><ol start="20"><li>Человек живёт без всякой системы. С чего ему начать? Опишите первые семь дней по шагам.</li><li>Первый месяц: что добавлять и в каком порядке? Одна сфера за раз или все сразу?</li><li>Почему люди бросают? Назовите три главные причины по Вашему опыту.</li><li>Человек сорвался. Что ему делать на следующий день?</li><li>Как понять, что система заработала? Что человек замечает через неделю, через месяц, через три?</li><li>Кто держал Вас, когда хотелось бросить? Тренер, напарник, кто-то, кто спрашивал «где результат»?</li><li>Можно ли выстроить систему другому человеку? Как Вы это делали с командой, студентами, клиентами?</li><li>Есть ли у Вашей системы конец? Что меняется через год, через пять лет?</li></ol></details>
+ <details><summary>Истории: из них вырастут ролики <i>4&nbsp;вопр.</i></summary><ol start="28"><li>Спорт. Какой вид? Можно ли его называть? Три истории оттуда, которые Вы до сих пор вспоминаете.</li><li>Что ещё говорил тренер Владимир Турчинский, кроме «интенсивно, но недолго, или долго, но не интенсивно»?</li><li>Работа во главе района: один случай, где система выручила Вас или людей. Без политики и без действующих лиц.</li><li>Было ли время, когда система развалилась у Вас самого? Что случилось и как Вы её вернули?</li></ol></details>
+ <details><summary>Продукт: если бы сто человек пришли к Вам на месяц <i>7&nbsp;вопр.</i></summary><ol start="32"><li>Сто человек пришли к Вам на 30 дней. Что бы Вы делали с ними каждый день?</li><li>Какое задание Вы дали бы в первый день? А на седьмой и на тридцатый?</li><li>Что Вы бы запретили участникам, а что потребовали бы обязательно?</li><li>Каким Вы хотите видеть человека через 30 дней и через год? Не обещание, а то, что Вы бы считали успехом.</li><li>Что Вас раздражает в мотивационных марафонах и курсах? Чего у нас быть не должно?</li><li>Сколько времени в неделю Вы готовы давать продукту: записать задания, вести эфир, отвечать?</li><li>Как бы Вы сами назвали этот продукт?</li></ol></details>
+ <details><summary>Канал: о чём и для кого <i>3&nbsp;вопр.</i></summary><ol start="39"><li>О чём Вы можете говорить часами?</li><li>Кому Вы хотите помочь в первую очередь? Опишите одного такого человека.</li><li>Каким Вы хотите, чтобы Вас запомнили зрители через год?</li></ol></details>
+</div>
+
+ <div class="svyaz"><a class="knopka" href="https://t.me/ingvarcrypto" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.5 3.6 2.9 10.8c-1.3.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.6c.2.7.4.9.9.9.4 0 .6-.2.9-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.7c.3-1.3-.5-1.9-1.5-1.5zM8.3 13.4l9.5-6c.4-.3.9-.1.5.3l-7.8 7.1-.3 3.3z" fill="currentColor"/></svg>Telegram</a><a class="knopka vt" href="tel:+79166457381"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z" fill="currentColor"/></svg><span class="nw">+7 916 645-73-81</span></a></div>
+ <a class="nazad" href="./">← Вернуться к дорожной карте</a>
+</div></section>
+</body>
+</html>
